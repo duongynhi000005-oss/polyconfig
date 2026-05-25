@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polyconfig"
+version = "0.1.0"
+description = "Format and convert JSON, YAML, and TOML from the command line."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  {name = "duongynhi000005-oss"}
+]
+keywords = ["json", "yaml", "toml", "formatter", "converter", "cli"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Utilities"
+]
+dependencies = [
+  "PyYAML>=6.0",
+  "tomli-w>=1.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2.2",
+  "pytest>=8.0"
+]
+
+[project.scripts]
+polyconfig = "polyconfig.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/duongynhi000005-oss/polyconfig"
+Repository = "https://github.com/duongynhi000005-oss/polyconfig"
+Issues = "https://github.com/duongynhi000005-oss/polyconfig/issues"
+Funding = "https://github.com/sponsors/duongynhi000005-oss"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["polyconfig*"]
