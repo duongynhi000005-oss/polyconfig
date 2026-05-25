@@ -14,7 +14,7 @@ It formats files in place, converts between config formats, and can print normal
 ## Install
 
 ```bash
-pip install polyconfig
+pip install git+https://github.com/duongynhi000005-oss/polyconfig.git
 ```
 
 ## Usage
